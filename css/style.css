@@ -15,25 +15,121 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 */
 
 /* VARIÁVEIS */
-:root{
-  
+:root {
+	
+	--color-texts: #808080;
 }
 
 /*BODY*/
-	body{
 
-	}
+
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background-color: #141414;
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;;
+	height: 100vh;
+}
 
 /*TOPO*/
-	header.topo{
-		
-	}
 
-/*RODAPÉ*/
-	
+header.topo {
+	display: flex;
+	width: 80px;
+}
+
+header.topo figure > figcaption {
+	visibility: hidden;
+}
+
 
 /*PÁGINA INICIAL*/
-	div.pg-home{
-		
+
+div.pg-home {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;	
+}
+
+div.pg-home section{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+	 ul{
+		display: flex;
+		width: 858px;
+		list-style-type: none;
+		padding: 0;
+		justify-content: center;
+	}
+	
+	li{
+		width: 186px;
+		padding: 0;
+		margin: 0;
 	}
 
+	 li figure{
+		width: 186px;
+		margin: 0;
+		text-align: center;
+	}
+	
+
+	li img{
+		width: 160px;	
+	}
+	li figure img:hover{
+		
+		border: 2px solid white;
+	    cursor: pointer;
+	}
+
+	 li figure figcaption{
+		color: var(--color-texts);
+	}
+
+	li h3{
+		visibility: hidden;
+	}
+
+	.addPerfil{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-end;
+	}
+
+	.addPerfil img{
+		width: 80px;
+		padding: 33px;
+	}
+	
+	/*RODAPÉ*/
+
+footer button{
+	background-color: #141414;
+	color: var(--color-texts);
+	border: 0.5px solid var(--color-texts);
+	text-transform: uppercase;
+	padding: 4px 25px;
+}
+footer button:hover{
+	border: 1px solid white;
+	cursor: pointer;
+}
+
+
+/*TABLET*/
+@media (max-width: 768px){
+		div.pg-home section ul{
+			width: 80vw;
+			flex-wrap: wrap;
+		}
+		
+	}
